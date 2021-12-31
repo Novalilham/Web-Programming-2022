@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        fieldset{
-            width: 250px;
-            height: 250px;
-        }
-    </style>
+    <title>chatbox</title>
     <script>
         function chatbox(){
-            let box = document.getElementById("box").value;
-            let chat = document.getElementById("chat").value;
-            let area_box = document.getElementById("box"); 
-            display_box.innerHTML = chat;
+            let hasil = document.getElementById("hasil")
+            let input = document.getElementById("masukan")
+            let box = ""
+            console.log(hasil);
+            box = box + input.value + "<br>"
+            hasil.innerHTML = box
+            input.value = ""
         }
     </script>
 </head>
 <body>
-       <form>
-           <fieldset>
-               <p id="display_chat"></p>
-           </fieldset>
-       </form>
-       <input type="text" id="chat" size="30"><input type="button" onclick="chatbox()" value="kirim" />
+    <div id="hasil" style="width: 300px; height: 300px; border: 1px solid black;"></div>
+        <input id="masukan" type="text" size="40">
+        <button onclick="chatbox()">kirim</button>
 </body>
 </html>
