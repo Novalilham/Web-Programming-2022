@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function hitung(pilihan)
+{
+    let bil1 = document.getElementById('angka1').value;
+    let bil2 = document.getElementById('angka2').value;
+    bil1 = parseInt(bil1)
+    bil2 = parseInt(bil2)
+    if (pilihan=='+'){
+        document.getElementById('hasil').value = bil1 + bil2;
+    }
+    else if(pilihan == '-'){
+        document.getElementById('hasil').value = bil1 - bil2;
+    }
+    else if(pilihan == '*'){
+        document.getElementById('hasil').value = bil1 * bil2;
+    }
+    else {
+        document.getElementById('hasil').value = bil1 / bil2;
+    }
+    let hasil = document.getElementById('hasil').value;
+    console.log("bilangan 1 :" + bil1);
+    console.log("bilangan 2 :" + bil2);
+    console.log("hasil :" + hasil);
+}
+    </script>
+</head>
+<body>
+    <h3>Kalkulator</h3>
+    <hr/>
+        Bilangan 1 : <input name="bil1" type="text" value="" id="angka1" />
+        <br/>
+        Bilangan 2 : <input name="bil2" type="text" value="" id="angka2" />
+        <br/>
+        <input name="hitung" type="button" value="+" onclick="hitung(this.value)"/>
+        <input name="hitung" type="button" value="-" onclick="hitung(this.value)"/>
+        <input name="hitung" type="button" value="*" onclick="hitung(this.value)"/>
+        <input name="hitung" type="button" value="/" onclick="hitung(this.value)"/>
+
+        <br/>
+        Hasil : <input name="hasil" type="text" value="" id="hasil" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function Kurs(){
+            let dollar = document.getElementById("dollar").value;
+            let rupiah = 14650;
+            let kurs = dollar * rupiah;
+            let area_kurs = document.getElementById("kurs");
+            area_kurs.innerHTML = "Kurs Rupiah :" + kurs;
+        }
+    </script>
+</head>
+<body>
+    <h3>Menghitung kurs Rupiah</h3>
+    Masukkan Uang Dollar ($) : <input type="number" name="" size="10" id="dollar">
+    <br/>
+    <button onclick="Kurs()">Kurs :</button> <span id="kurs"></span>
+</body>
+</html>

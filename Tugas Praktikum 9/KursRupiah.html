@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function hitung(pilihan){
+            let bil1=document.getElementById('angka1').value;
+            rupiah =0;
+            bil1 = parseInt(bil1)
+            rupiah = parseInt(rupiah)
+            if (pilihan=='dollarus'){
+                rupiah = 9915;
+                document.getElementById('hasil').value = bil1 * rupiah;
+        }
+            else if(pilihan == 'dollarsg'){
+                rupiah = 13472;
+                document.getElementById('hasil').value = bil1 * rupiah;
+        }
+            else if(pilihan == 'ringgit'){
+                rupiah = 874;
+                document.getElementById('hasil').value = bil1 * rupiah;
+        }
+            else if(pilihan=="yen"){
+                rupiah = 120;
+                document.getElementById('hasil').value = bil1 * rupiah;
+        }
+            else if(pilihan=="euro"){
+                rupiah = 15888;
+                document.getElementById('hasil').value = bil1 * rupiah;
+        }
+            else{
+                rupiah = 3592;
+                document.getElementById('hasil').value = bil1 * rupiah;
+        }
+    }
+
+    </script>
+    
+</head>
+<body>
+    Masukkan Nilai :<input type="text" name="bil1" id="angka1">
+    Nilai Rupiah : <input name="hasil" type="text" value="0" id="hasil" />
+    <p>Valas :  <input name="hitung" type="radio" value="dollarus" onclick="hitung(this.value)"/>Dollar US
+                <input name="hitung" type="radio" value="dollarsg" onclick="hitung(this.value)"/>Dollar Singapore
+                <input name="hitung" type="radio" value="ringgit" onclick="hitung(this.value)"/>Ringgit
+                <input name="hitung" type="radio" value="yen" onclick="hitung(this.value)"/>Yen
+                <input name="hitung" type="radio" value="euro" onclick="hitung(this.value)"/>Euro
+                <input name="hitung" type="radio" value="riyal" onclick="hitung(this.value)"/>Riyal</p>
+
+    
+</body>
+</html>

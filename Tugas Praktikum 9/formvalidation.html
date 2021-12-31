@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>validasi</title>
+    <script type="text/JavaScript">
+        function validation(){
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var jam = document.getElementById("jam").value;
+            var tujuan = document.getElementById("tujuan").value;
+            var tiket = document.getElementById("tiket").value;
+            display_nama.innerHTML ="Nama Pelanggan : " + nama;
+            display_email.innerHTML ="E-mail : " + email;
+            display_jam.innerHTML ="Jam Keberangkatan : " + jam;
+            display_tujuan.innerHTML ="Tujuan Keberangkatan : " + tujuan;
+            display_tiket.innerHTML ="Jumlah Tiket : " + tiket;
+
+            if(nama == "Noval Ilham" || email == "novalilham060@gmail.com" || jam== "13.15" || tujuan == "jepang" || tiket == "2" ){
+            alert("pesanan benar")
+         }
+            else{
+            alert("pesanan salah")
+         }
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend></legend>        
+        <p>
+            <label>Nama Pelanggan:</label>
+            <input type="text" id="nama" placeholder="Nama lengkap" maxlength="30"/>
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="email" />
+        </p>
+        <p>
+            <label>Jam Keberangkatan:</label>
+            <input type="time" id="jam"/>
+        <p>
+            <label>Tujuan Keberangkatan :</label>
+            <input type="text" id="tujuan"/>
+        </p>
+        <p>
+            <label>Jumlah Tiket : </label>
+            <input type="number" id="tiket" max="10"/>
+        </p>
+        <p>
+            <input type="button" onclick="validation()" value="submit" />
+        </p>
+    </fieldset>
+    </form> 
+    <p> <span id = "display_nama"></span> </p>
+    <p> <span id = "display_email"></span> </p>
+    <p> <span id = "display_jam"></span> </p>
+    <p> <span id = "display_tujuan"></span> </p>
+    <p> <span id = "display_tiket"></span> </p>
+    </body>
+    <html>
