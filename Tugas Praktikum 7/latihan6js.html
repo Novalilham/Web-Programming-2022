@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script language="JavaScript">
+        function cariteman(){
+            let frm = document.getElementById("frm_cari");
+            let str = frm.nama_cari.value;
+            alert("Kata Cari : " + frm.nama_cari.value);
+            document.getElementById("Katacari").innerHTML= str;
+            console.log(str);
+            if(str == "noval"){
+                console.log("noval ketemu !!");
+                document.getElementById("Katacari").style="color:blue";
+            }else{
+                console.log("ini bukan noval ");
+                document.getElementById("Katacari").style="color:red";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form id="frm_cari">
+        Cari siswa :
+        <input type="text" name="nama_cari" value="" size="30">
+        <input type="button" value="Go" name="proses_cari" onclick="cariteman()">
+    </form>
+    <hr/>
+    <div style="width : 300px;border: 25px solid gray;padding: 25px;margin: 25px;">
+        Nama yang anda cari : <span id="Katacari"></span>
+    </div>
+</body>
+</html>
